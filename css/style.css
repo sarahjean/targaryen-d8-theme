@@ -1,0 +1,145 @@
+/**
+  Config file that contains centralized variables
+*/
+/**
+  Base :: smacss
+*/
+html {
+  line-height: 19px; }
+
+html {
+  background: #FFE6E6;
+  background: url(../img/background.png?1) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 145%; }
+
+body .mq_targaryen {
+  background: #ffffff;
+  background: white;
+  background: rgba(255, 255, 255, 0.87); }
+
+h1, h2, h3, h4 {
+  font-family: "Lobster", cursive;
+  font-size: 322%;
+  font-weight: normal; }
+
+#header-region nav ul.menu {
+  background: #f0ebe0;
+  margin: 0;
+  padding: 8px;
+  border-top: 1px dotted #dcd0d0;
+  border-bottom: 1px dotted #dcd0d0; }
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #411c1c; }
+  a:hover, a:link:hover, a:visited:hover {
+    text-decoration: underline; }
+
+/**
+  Layout :: smacss
+*/
+body {
+  text-align: center; }
+
+.mq_targaryen {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin: auto; }
+  .mq_targaryen:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/**
+  Sidebar first
+*/
+body.body-sidebar-first aside.sidebar-first {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%; }
+  body.body-sidebar-first aside.sidebar-first > * {
+    padding-left: 15px; }
+
+body.body-sidebar-first section#content {
+  width: 74.57627%;
+  float: right;
+  margin-right: 0; }
+  body.body-sidebar-first section#content > * {
+    padding-right: 25px; }
+
+/**
+  Sidebar last
+*/
+body.body-sidebar-last aside.sidebar-last {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0; }
+  body.body-sidebar-last aside.sidebar-last > * {
+    padding-right: 15px; }
+
+body.body-sidebar-last section#content {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%; }
+  body.body-sidebar-last section#content > * {
+    padding-left: 25px; }
+
+/**
+  Sidebar both
+*/
+body.body-sidebar-both aside.sidebar-first {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%; }
+  body.body-sidebar-both aside.sidebar-first > * {
+    padding-left: 15px; }
+
+body.body-sidebar-both section#content {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%; }
+  body.body-sidebar-both section#content > * {
+    padding-right: 25px; }
+
+body.body-sidebar-both aside.sidebar-last {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0; }
+  body.body-sidebar-both aside.sidebar-last > * {
+    padding-right: 15px; }
+
+/**
+  Sidebar both
+*/
+body.body-sidebar-none section#content {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  body.body-sidebar-none section#content > * {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+/**
+  Component :: smacss
+*/
+.block {
+  border: none; }
+
+/**
+  State :: smacss
+*/
+.sidebars .block {
+  margin: 15px 0;
+  border: 1px solid #efefef;
+  padding: 10px;
+  background: #FFE6E6; }

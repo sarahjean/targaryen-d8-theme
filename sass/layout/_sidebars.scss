@@ -1,0 +1,84 @@
+/**
+  Sidebar first
+*/
+body.body-sidebar-first {
+
+  aside.sidebar-first {
+    @include span(3 of 12);
+    > * {
+      padding-left: 15px;
+    }
+  }
+
+  section#content {
+    @include span(9 of 12 last);
+    > * {
+      padding-right: 25px;
+    }
+  }
+
+}
+
+/**
+  Sidebar last
+*/
+body.body-sidebar-last {
+
+  aside.sidebar-last {
+    @include span(3 of 12 last);
+    > * {
+      padding-right: 15px;
+    }
+  }
+
+  section#content {
+    @include span(9 of 12);
+    > * {
+      padding-left: 25px;
+    }
+  }
+
+}
+
+/**
+  Sidebar both
+*/
+body.body-sidebar-both {
+
+  aside.sidebar-first {
+    @include span(2 of 12);
+    > * {
+      padding-left: 15px;
+    }
+  }
+
+  section#content {
+    @include span(8 of 12);
+    > * {
+      padding-right: 25px;
+    }
+  }
+
+  aside.sidebar-last {
+    @include span(2 of 12 last);
+    > * {
+      padding-right: 15px;
+    }
+  }
+
+}
+
+/**
+  Sidebar both
+*/
+body.body-sidebar-none {
+
+  section#content {
+    @include span(12 of 12);
+    > * {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+}

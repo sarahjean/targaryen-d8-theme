@@ -1,0 +1,44 @@
+html {
+  line-height: 19px;
+}
+
+html {
+  background: $lightred;
+  background: url(../img/background.png?1) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: $opensans;
+  line-height: 145%;
+}
+
+body .mq_targaryen {
+  background: #ffffff;
+  @include opac-color(255, 255, 255, .87);
+}
+
+h1, h2, h3, h4 {
+  font-family: $lobster;
+  font-size: 322%;
+  font-weight: normal;
+}
+
+#header-region nav ul.menu {
+  background: $badgeish;
+  margin: 0;
+  padding: 8px;
+  border-top: 1px dotted $morered;
+  border-bottom: 1px dotted $morered;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: $veryred;
+  &:hover {
+    text-decoration: underline;
+  }
+}

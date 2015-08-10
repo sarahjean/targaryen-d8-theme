@@ -1,0 +1,20 @@
+name: Targaryen
+type: theme
+description: 'A placeholder theme designed for D8 training'
+base theme: classy
+package: Core
+core: 8.x
+libraries:
+  - targaryen/targaryensub
+stylesheets-remove:
+  - '@classy/css/layout.css'
+  # - core/assets/vendor/normalize-css/normalize.css
+regions:
+  header: Header
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_last: 'Sidebar last'
+  footer: Footer
+
+
+# @see http://bit.ly/1K8j1Ei

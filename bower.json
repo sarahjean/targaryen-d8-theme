@@ -1,0 +1,20 @@
+{
+  "name": "targaryen",
+  "version": "0.1.0",
+  "authors": [
+    "Jason Enter <jason.enter@acquia.com>"
+  ],
+  "description": "sample bower file",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1"
+  }
+}

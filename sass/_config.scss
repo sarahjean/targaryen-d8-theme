@@ -1,0 +1,24 @@
+// colors vars
+$blueish: #dae8ef;
+$greyish: #efefef;
+$lightred: #FFE6E6;
+$morered: #dcd0d0;
+$badgeish: #f0ebe0;
+$veryred: #411c1c;
+
+// fonts
+$opensans: 'Open Sans', sans-serif;
+$lobster: 'Lobster', cursive;
+
+// susy configs
+$susy: (
+  columns: 12, // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
+// example mixins
+@mixin opac-color($r, $g, $b, $pertc) {
+  background: rgb($r, $g, $b);
+  background: rgba($r, $g, $b, $pertc);
+}
+

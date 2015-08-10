@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+}
+
+.mq_targaryen {
+  @include container(80em);
+  text-align: left;
+  margin: auto;
+}

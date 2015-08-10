@@ -1,0 +1,1 @@
+!function($,Drupal,window,document,undefined){Drupal.behaviors.primaryTheme={attach:function(context,settings){console.log("Hello friend, your theme has loaded.")}}}(jQuery,Drupal,this,this.document);
