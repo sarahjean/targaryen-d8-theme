@@ -4,7 +4,7 @@
   "authors": [
     "Jason Enter <jason.enter@acquia.com>"
   ],
-  "description": "sample bower file",
+  "description": "theme bower file",
   "license": "MIT",
   "ignore": [
     "**/.*",

@@ -19,23 +19,19 @@ gulp.task('lint', function () {
 
 gulp.task('sass', function () {
   return gulp.src(['sass/**/*.scss'])
-    //.pipe(sourcemaps.init())
     .pipe(globbing({
       extensions: ['.scss']
     }))
     .pipe(sass({
       errLogToConsole: true
     }))
-    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('css'));
 });
 
 
 gulp.task('scripts', function () {
   return gulp.src('js-src/*.js')
-    //.pipe(sourcemaps.init())
     .pipe(uglify({mangle: false}))
-    //.pipe(sourcemaps.write())
     .pipe(concat('all.js'))
     .pipe(gulp.dest('js'))
 });
