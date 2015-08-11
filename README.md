@@ -131,9 +131,26 @@ js:
 		- core/jquery
 ``` 
 
-### [Task #8] Integrate Google web font into theme
+### [Task #8] Integrate Google web fonts into theme
 
+Our next task is going to be integrating Google's fonts into our theme using a ```hook_css_alter``` preprocess hook. Since this is an external CSS library that is external, we will want to integrate this file at the proper step in the page load. Open the targaryen.theme file and use ```targaryen_css_alter()``` to insert properly with the other CSS grouping with the following code: 
 
+```
+function targaryen_css_alter(&$css) {
+  // Add CDN Google fonts.
+  $googlefonts = '//fonts.googleapis.com/css?family=Open+Sans:400,700,300|Lobster';
+  $css[$googlefonts] = array(
+    'data' => $googlefonts,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -2,
+  );
+}
+``` 
 
 
 ### [Task #9] Create preprocess variable to display in Twig file
