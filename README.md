@@ -174,8 +174,24 @@ function targaryen_preprocess_node(&$variables) {
 After clearing your cache, this new variable will now be available to print in our Twig template for each node. If you look in the node.html.twig file, reference the following code to see how this is printed: ```{{ dragon_nid }}``` by inserting into a data- tag. 
 
 
+### [Task #10] Create custom classes within Twig file
 
-### [Task #10] Create custom classes in Twig file
+The Twig rendering process offers many built-in options to adjust classes on the fly within the files themselves. In the node.html.twig file you will see the following example of how to do this. 
+
+```
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+``` 
+
+There are further examples of Twig filters and also more variables to expose in addition to Twig's ```clean_class```. This is printed with the following code on the article tag: 
+
+```
+<article {{ attributes.addClass(classes) }}>
+
+```
 
 
 ### [Task #11] Create dynamic classes for theme
@@ -185,6 +201,8 @@ After clearing your cache, this new variable will now be available to print in o
 
 
 ### [Task #14] ~ 
+
+d
 
 
 
