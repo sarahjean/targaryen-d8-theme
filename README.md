@@ -193,21 +193,61 @@ There are further examples of Twig filters and also more variables to expose in 
 
 ```
 
+### [Task #11] Create dynamic classes for Susy
 
-### [Task #11] Create dynamic classes for theme
+We will need to assign dynamic classes on our body tag in order to make adjustments to our grid system. This will be done by using the stardard preprocess functions in targaryen.theme file using ```hook_preprocess_html()``` function. This code will work by detecting the existing of the sidebar elements and ajusting accordingly. 
+
+```
+function targaryen_preprocess_html(&$variables) {
+  if (isset($variables['page']['sidebar_first']) && isset($variables['page']['sidebar_last'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-both';
+  }
+  elseif (isset($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-first';
+  }
+  elseif (isset($variables['page']['sidebar_last'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-last';
+  }
+  else {
+    $variables['attributes']['class'][] = 'body-sidebar-none';
+  }
+}
+
+```
 
 
 ### [Task #12] Setup outer grid using Susy 
 
+Now that the body classes are automatically updating, we can just add in the proper Susy declarations to setup a base grid system based on sidebars. In the layout/_containers.scss file, we address the outer container "mq__targaryen" class. 
 
-### [Task #14] ~ 
+```
+.mq_targaryen {
+  @include container(80em);
+  text-align: left;
+  margin: auto;
+}
+```
 
-d
+After we have setup the outside container rules, we can now quickly drop in the basic Susy rules for each sidebar scenario. The following code will illustrate an example of the left sidebar, but the full code is in the layout/_sidebars.scss file. 
 
+```
+/**
+  Sidebar first
+*/
+body.body-sidebar-first {
+  @include breakpoint($min-tablet) {
+    aside.sidebar-first {
+      @include span(3 of 12);
+    }
+    section#content {
+      @include span(9 of 12 last);
+    }
+  }
+}
+```
 
 
 - - - - - - - - - - - - - - - - - -  
-
 
 <!-- ![alt text](http://media2.popsugar-assets.com/files/2014/07/16/768/n/1922283/e2c7361ce77fc14c_drogonktb08g.xxxlarge/i/Oh-your-kids-rambunctious-Daenerys-Targaryen-tries-tame-dragons.gif  "dragon")  -->
 

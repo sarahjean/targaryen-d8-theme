@@ -62,60 +62,59 @@ body {
 /**
   Sidebar first
 */
-body.body-sidebar-first aside.sidebar-first {
-  width: 23.72881%;
-  float: left;
-  margin-right: 1.69492%; }
-  body.body-sidebar-first aside.sidebar-first > * {
-    padding-left: 15px; }
-
-body.body-sidebar-first section#content {
-  width: 74.57627%;
-  float: right;
-  margin-right: 0; }
-  body.body-sidebar-first section#content > * {
-    padding-right: 25px; }
+@media (min-width: 768px) {
+  body.body-sidebar-first aside.sidebar-first {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%; }
+    body.body-sidebar-first aside.sidebar-first > * {
+      padding-left: 15px; }
+  body.body-sidebar-first section#content {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0; }
+    body.body-sidebar-first section#content > * {
+      padding-right: 25px; } }
 
 /**
   Sidebar last
 */
-body.body-sidebar-last aside.sidebar-last {
-  width: 23.72881%;
-  float: right;
-  margin-right: 0; }
-  body.body-sidebar-last aside.sidebar-last > * {
-    padding-right: 15px; }
-
-body.body-sidebar-last section#content {
-  width: 74.57627%;
-  float: left;
-  margin-right: 1.69492%; }
-  body.body-sidebar-last section#content > * {
-    padding-left: 25px; }
+@media (min-width: 768px) {
+  body.body-sidebar-last aside.sidebar-last {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0; }
+    body.body-sidebar-last aside.sidebar-last > * {
+      padding-right: 15px; }
+  body.body-sidebar-last section#content {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%; }
+    body.body-sidebar-last section#content > * {
+      padding-left: 25px; } }
 
 /**
   Sidebar both
 */
-body.body-sidebar-both aside.sidebar-first {
-  width: 15.25424%;
-  float: left;
-  margin-right: 1.69492%; }
-  body.body-sidebar-both aside.sidebar-first > * {
-    padding-left: 15px; }
-
-body.body-sidebar-both section#content {
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%; }
-  body.body-sidebar-both section#content > * {
-    padding-right: 25px; }
-
-body.body-sidebar-both aside.sidebar-last {
-  width: 15.25424%;
-  float: right;
-  margin-right: 0; }
-  body.body-sidebar-both aside.sidebar-last > * {
-    padding-right: 15px; }
+@media (min-width: 768px) {
+  body.body-sidebar-both aside.sidebar-first {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%; }
+    body.body-sidebar-both aside.sidebar-first > * {
+      padding-left: 15px; }
+  body.body-sidebar-both section#content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%; }
+    body.body-sidebar-both section#content > * {
+      padding-right: 25px; }
+  body.body-sidebar-both aside.sidebar-last {
+    width: 15.25424%;
+    float: right;
+    margin-right: 0; }
+    body.body-sidebar-both aside.sidebar-last > * {
+      padding-right: 15px; } }
 
 /**
   Sidebar both
