@@ -174,22 +174,80 @@ function targaryen_preprocess_node(&$variables) {
 After clearing your cache, this new variable will now be available to print in our Twig template for each node. If you look in the node.html.twig file, reference the following code to see how this is printed: ```{{ dragon_nid }}``` by inserting into a data- tag. 
 
 
+### [Task #10] Create custom classes within Twig file
 
-### [Task #10] Create custom classes in Twig file
+The Twig rendering process offers many built-in options to adjust classes on the fly within the files themselves. In the node.html.twig file you will see the following example of how to do this. 
 
+```
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+``` 
 
-### [Task #11] Create dynamic classes for theme
+There are further examples of Twig filters and also more variables to expose in addition to Twig's ```clean_class```. This is printed with the following code on the article tag: 
+
+```
+<article {{ attributes.addClass(classes) }}>
+
+```
+
+### [Task #11] Create dynamic classes for Susy
+
+We will need to assign dynamic classes on our body tag in order to make adjustments to our grid system. This will be done by using the stardard preprocess functions in targaryen.theme file using ```hook_preprocess_html()``` function. This code will work by detecting the existing of the sidebar elements and ajusting accordingly. 
+
+```
+function targaryen_preprocess_html(&$variables) {
+  if (isset($variables['page']['sidebar_first']) && isset($variables['page']['sidebar_last'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-both';
+  }
+  elseif (isset($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-first';
+  }
+  elseif (isset($variables['page']['sidebar_last'])) {
+    $variables['attributes']['class'][] = 'body-sidebar-last';
+  }
+  else {
+    $variables['attributes']['class'][] = 'body-sidebar-none';
+  }
+}
+
+```
 
 
 ### [Task #12] Setup outer grid using Susy 
 
+Now that the body classes are automatically updating, we can just add in the proper Susy declarations to setup a base grid system based on sidebars. In the layout/_containers.scss file, we address the outer container "mq__targaryen" class. 
 
-### [Task #14] ~ 
+```
+.mq_targaryen {
+  @include container(80em);
+  text-align: left;
+  margin: auto;
+}
+```
 
+After we have setup the outside container rules, we can now quickly drop in the basic Susy rules for each sidebar scenario. The following code will illustrate an example of the left sidebar, but the full code is in the layout/_sidebars.scss file. 
+
+```
+/**
+  Sidebar first
+*/
+body.body-sidebar-first {
+  @include breakpoint($min-tablet) {
+    aside.sidebar-first {
+      @include span(3 of 12);
+    }
+    section#content {
+      @include span(9 of 12 last);
+    }
+  }
+}
+```
 
 
 - - - - - - - - - - - - - - - - - -  
-
 
 <!-- ![alt text](http://media2.popsugar-assets.com/files/2014/07/16/768/n/1922283/e2c7361ce77fc14c_drogonktb08g.xxxlarge/i/Oh-your-kids-rambunctious-Daenerys-Targaryen-tries-tame-dragons.gif  "dragon")  -->
 

@@ -3,17 +3,20 @@
 */
 body.body-sidebar-first {
 
-  aside.sidebar-first {
-    @include span(3 of 12);
-    > * {
-      padding-left: 15px;
-    }
-  }
+  @include breakpoint($min-tablet) {
 
-  section#content {
-    @include span(9 of 12 last);
-    > * {
-      padding-right: 25px;
+    aside.sidebar-first {
+      @include span(3 of 12);
+      > * {
+        padding-left: 15px;
+      }
+    }
+
+    section#content {
+      @include span(9 of 12 last);
+      > * {
+        padding-right: 25px;
+      }
     }
   }
 
@@ -24,18 +27,22 @@ body.body-sidebar-first {
 */
 body.body-sidebar-last {
 
-  aside.sidebar-last {
-    @include span(3 of 12 last);
-    > * {
-      padding-right: 15px;
-    }
-  }
+  @include breakpoint($min-tablet) {
 
-  section#content {
-    @include span(9 of 12);
-    > * {
-      padding-left: 25px;
+    aside.sidebar-last {
+      @include span(3 of 12 last);
+      > * {
+        padding-right: 15px;
+      }
     }
+
+    section#content {
+      @include span(9 of 12);
+      > * {
+        padding-left: 25px;
+      }
+    }
+
   }
 
 }
@@ -45,25 +52,29 @@ body.body-sidebar-last {
 */
 body.body-sidebar-both {
 
-  aside.sidebar-first {
-    @include span(2 of 12);
-    > * {
-      padding-left: 15px;
-    }
-  }
+  @include breakpoint($min-tablet) {
 
-  section#content {
-    @include span(8 of 12);
-    > * {
-      padding-right: 25px;
+    aside.sidebar-first {
+      @include span(2 of 12);
+      > * {
+        padding-left: 15px;
+      }
     }
-  }
 
-  aside.sidebar-last {
-    @include span(2 of 12 last);
-    > * {
-      padding-right: 15px;
+    section#content {
+      @include span(8 of 12);
+      > * {
+        padding-right: 25px;
+      }
     }
+
+    aside.sidebar-last {
+      @include span(2 of 12 last);
+      > * {
+        padding-right: 15px;
+      }
+    }
+
   }
 
 }

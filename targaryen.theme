@@ -21,6 +21,7 @@ function targaryen_css_alter(&$css) {
 }
 
 function targaryen_preprocess_html(&$variables) {
+
   // Get current user.
   $user = \Drupal::currentUser();
   $roles = $user->getRoles();
@@ -28,7 +29,7 @@ function targaryen_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'role-' . $role;
   }
 
-// body class for sidebars
+  // <body> classes for sidebars
   if (isset($variables['page']['sidebar_first']) && isset($variables['page']['sidebar_last'])) {
     $variables['attributes']['class'][] = 'body-sidebar-both';
   }
