@@ -152,8 +152,27 @@ function targaryen_css_alter(&$css) {
 }
 ``` 
 
+The "Open Sans" and "Lobster" fonts will now be available to be used in our theme and can both be referenced as variables in the _config.scss file. 
+
+```
+$opensans: 'Open Sans', sans-serif;
+$lobster: 'Lobster', cursive;
+``` 
+
 
 ### [Task #9] Create preprocess variable to display in Twig file
+
+Next we will introduce a new variable to display on site nodes in the theme. This will be accomplished by using the ```hook_preprocess_page``` function. In the targaryen.theme file add the following code:  
+
+```
+function targaryen_preprocess_node(&$variables) {
+  // Create a new variable for node.html.twig
+  $variables['dragon_nid'] = 'dragon-nid-' . $variables['node']->nid->value;
+}
+``` 
+
+After clearing your cache, this new variable will now be available to print in our Twig template for each node. If you look in the node.html.twig file, reference the following code to see how this is printed: ```{{ dragon_nid }}``` by inserting into a data- tag. 
+
 
 
 ### [Task #10] Create custom classes in Twig file

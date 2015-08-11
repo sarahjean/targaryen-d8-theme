@@ -7,8 +7,9 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 
+<span data-dragon-nid="{{ dragon_nid }}"><!-- + --></span>
 
-<article{{ attributes.addClass(classes) }}>
+<article {{ attributes.addClass(classes) }}>
 
     {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
         <header>
