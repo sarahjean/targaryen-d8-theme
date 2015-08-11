@@ -7,7 +7,7 @@
     attach: function (context, settings) {
       if (context === document) { // only fires on document load
 
-        console.log('Dear friend, your theme has loaded.'); 
+        console.log('Dear friend, your theme has loaded.');
 
       }
     }

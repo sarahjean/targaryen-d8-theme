@@ -120,11 +120,59 @@ After completing the [installation steps](#installation-steps) all the necessary
 
 ### [Task #7] Add custom JS library file to theme 
 
+We will now add the [Flexslider](http://www.woothemes.com/flexslider/) plugin into our theme. After downloading the JS file, just add to the js-src/plugin folder and Gulp will copy it over to the js/ folder. We are skipping linting on the plugin files since we are relying on the plugin authors for standardization. 
 
-### [Task #8] Integrate Google web font into theme
+Then add the following code into our targaryen.libraries.yml file to finish integrating into theme library: 
+
+```
+js:
+	js/plugins/jquery.flexslider-min.js: {}
+	dependencies:
+		- core/jquery
+``` 
+
+### [Task #8] Integrate Google web fonts into theme
+
+Our next task is going to be integrating Google's fonts into our theme using a ```hook_css_alter``` preprocess hook. Since this is an external CSS library that is external, we will want to integrate this file at the proper step in the page load. Open the targaryen.theme file and use ```targaryen_css_alter()``` to insert properly with the other CSS grouping with the following code: 
+
+```
+function targaryen_css_alter(&$css) {
+  // Add CDN Google fonts.
+  $googlefonts = '//fonts.googleapis.com/css?family=Open+Sans:400,700,300|Lobster';
+  $css[$googlefonts] = array(
+    'data' => $googlefonts,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -2,
+  );
+}
+``` 
+
+The "Open Sans" and "Lobster" fonts will now be available to be used in our theme and can both be referenced as variables in the _config.scss file. 
+
+```
+$opensans: 'Open Sans', sans-serif;
+$lobster: 'Lobster', cursive;
+``` 
 
 
 ### [Task #9] Create preprocess variable to display in Twig file
+
+Next we will introduce a new variable to display on site nodes in the theme. This will be accomplished by using the ```hook_preprocess_page``` function. In the targaryen.theme file add the following code:  
+
+```
+function targaryen_preprocess_node(&$variables) {
+  // Create a new variable for node.html.twig
+  $variables['dragon_nid'] = 'dragon-nid-' . $variables['node']->nid->value;
+}
+``` 
+
+After clearing your cache, this new variable will now be available to print in our Twig template for each node. If you look in the node.html.twig file, reference the following code to see how this is printed: ```{{ dragon_nid }}``` by inserting into a data- tag. 
+
 
 
 ### [Task #10] Create custom classes in Twig file
@@ -136,7 +184,16 @@ After completing the [installation steps](#installation-steps) all the necessary
 ### [Task #12] Setup outer grid using Susy 
 
 
-### [Task #13] Setup outer grid using Susy 
+### [Task #14] ~ 
+
+
+
+- - - - - - - - - - - - - - - - - -  
+
+
+<!-- ![alt text](http://media2.popsugar-assets.com/files/2014/07/16/768/n/1922283/e2c7361ce77fc14c_drogonktb08g.xxxlarge/i/Oh-your-kids-rambunctious-Daenerys-Targaryen-tries-tame-dragons.gif  "dragon")  -->
+
+
 
 
 

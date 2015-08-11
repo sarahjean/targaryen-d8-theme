@@ -4,4 +4,7 @@ dragon:
     theme:
       css/style.css: {}
   js:
+    js/plugins/jquery.flexslider-min.js: {}
     js/all.js: {}
+    dependencies:
+      - core/jquery

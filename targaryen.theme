@@ -51,19 +51,8 @@ function targaryen_preprocess_html(&$variables) {
 
 function targaryen_preprocess_node(&$variables) {
 
-  $variables['hamburgers'] = $variables['node']->nid->value;
-
-  // Add a striping class.
-  $variables['attributes']['class'][] = 'node-' . $variables['zebra'];
-
-  // Add $unpublished variable.
-  $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
-
-  // Merge first/last class (from targaryen_preprocess_page) into classes array of current node object.
-  $node = $variables['node'];
-  if (!empty($node->classes_array)) {
-    $variables['attributes']['class'][] = array_merge($variables['attributes']['class'], $node->classes_array);
-  }
+  // Create a new variable for node.html.twig
+  $variables['dragon_nid'] = 'dragon-nid-' . $variables['node']->nid->value;
 
 }
 
