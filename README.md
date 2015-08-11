@@ -120,8 +120,20 @@ After completing the [installation steps](#installation-steps) all the necessary
 
 ### [Task #7] Add custom JS library file to theme 
 
+We will now add the [Flexslider](http://www.woothemes.com/flexslider/) plugin into our theme. After downloading the JS file, just add to the js-src/plugin folder and Gulp will copy it over to the js/ folder. We are skipping linting on the plugin files since we are relying on the plugin authors for standardization. 
+
+Then add the following code into our targaryen.libraries.yml file to finish integrating into theme library: 
+
+```
+js:
+	js/plugins/jquery.flexslider-min.js: {}
+	dependencies:
+		- core/jquery
+``` 
 
 ### [Task #8] Integrate Google web font into theme
+
+
 
 
 ### [Task #9] Create preprocess variable to display in Twig file
@@ -136,7 +148,16 @@ After completing the [installation steps](#installation-steps) all the necessary
 ### [Task #12] Setup outer grid using Susy 
 
 
-### [Task #13] Setup outer grid using Susy 
+### [Task #14] ~ 
+
+
+
+- - - - - - - - - - - - - - - - - -  
+
+
+<!-- ![alt text](http://media2.popsugar-assets.com/files/2014/07/16/768/n/1922283/e2c7361ce77fc14c_drogonktb08g.xxxlarge/i/Oh-your-kids-rambunctious-Daenerys-Targaryen-tries-tame-dragons.gif  "dragon")  -->
+
+
 
 
 
