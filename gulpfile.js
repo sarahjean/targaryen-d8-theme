@@ -94,8 +94,8 @@ gulp.task('imagemin', function () {
  * *************************
  */
 
-gulp.task('kss', function () {
-  return gulp.src(['sass/**/*.scss'])
+/*gulp.task('kss', function () {
+  return gulp.src(['sass/!**!/!*.scss'])
     .pipe(globbing({
       extensions: ['.scss']
     }))
@@ -103,7 +103,7 @@ gulp.task('kss', function () {
       overview: 'styleguide/styleguide.md'
     }))
     .pipe(gulp.dest('styleguide/'));
-});
+});*/
 
 /**
  * *************************

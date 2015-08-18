@@ -21,7 +21,8 @@
     "gulp-uglify": "^1.2.0",
     "imagemin-pngquant": "^4.1.2",
     "sprity": "^1.0.7",
-    "sprity-sass": "^1.0.4"
+    "sprity-sass": "^1.0.4",
+    "kss": "^2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
