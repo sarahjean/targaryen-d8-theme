@@ -1,0 +1,8 @@
+{
+  "source":       "./sass",
+  "destination":  "./kss_generated",
+  "css": [
+    "../css/styles.css"
+  ],
+  "js": []
+}
