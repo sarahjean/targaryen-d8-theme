@@ -30,3 +30,15 @@
   padding: 20px;
   border: 1px dashed lightgrey;
 }
+
+// testing...
+body#kss-node {
+  background: white !important;
+  position: relative;
+  text-align: left !important;
+  .kss-main,
+  .kss-sidebar {
+    background: white !important;
+  }
+}
+
