@@ -16,7 +16,8 @@ var sass = require('gulp-sass'),
   rename = require('gulp-rename'),
   sprity = require('sprity'),
   gulpif = require('gulp-if'),
-  debug = require('gulp-debug');
+  debug = require('gulp-debug'),
+  kss = require('gulp-kss');
 
 /**
  * *************************
@@ -85,6 +86,23 @@ gulp.task('imagemin', function () {
       use: [pngquant()]
     }))
     .pipe(gulp.dest('img'));
+});
+
+/**
+ * *************************
+ * KSS tests
+ * *************************
+ */
+
+gulp.task('kss', function () {
+  return gulp.src(['sass/**/*.scss'])
+    .pipe(globbing({
+      extensions: ['.scss']
+    }))
+    .pipe(kss({
+      overview: 'styleguide/styleguide.md'
+    }))
+    .pipe(gulp.dest('styleguide/'));
 });
 
 /**
