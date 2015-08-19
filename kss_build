@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Usage: ./build
+
+# Remove the styleguide from previous builds.
+echo -n "Deleting previous styleguide..."
+rm -rf kss_generated *.html
+echo " done."
+
+
+# Build the CSS with Bundler, Sass and Compass.
+# bundle exec compass compile
+echo " Compiling Sass with Gulp...."
+gulp sass
+echo " done."
+
+# Build the styleguide using kss-node.
+# kss-node [source files to parse] [destination folder] --template [location of template files]
+./node_modules/.bin/kss-node --config kss-project.json --template kss_template/ ;

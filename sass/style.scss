@@ -2,6 +2,11 @@
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 /**
+  Sprite generated
+*/
+@import "sprite";
+
+/**
   Config file that contains centralized variables
 */
 @import "config";
@@ -26,3 +31,8 @@
   State :: smacss
 */
 @import "state/*";
+
+/**
+  Testable KSS file
+*/
+@import "kss";

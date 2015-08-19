@@ -9,12 +9,15 @@ var gulp = require('gulp');
 var sass = require('gulp-sass'),
   jshint = require('gulp-jshint'),
   globbing = require('gulp-css-globbing'),
-  concat = require('gulp-concat'),
   sourcemaps = require('gulp-sourcemaps'),
   uglify = require('gulp-uglify'),
   imagemin = require('gulp-imagemin'),
-  pngquant = require('imagemin-pngquant');
-
+  pngquant = require('imagemin-pngquant'),
+  rename = require('gulp-rename'),
+  sprity = require('sprity'),
+  gulpif = require('gulp-if'),
+  debug = require('gulp-debug'),
+  kss = require('gulp-kss');
 
 /**
  * *************************
@@ -42,7 +45,6 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
   return gulp.src('js-src/*.js')
     .pipe(uglify({mangle: false}))
-    .pipe(concat('all.js'))
     .pipe(gulp.dest('js'))
 });
 
@@ -65,6 +67,17 @@ gulp.task('js-plugins', function () {
  * *************************
  */
 
+// Sprites
+gulp.task('sprites', function () {
+  return sprity.src({
+    src: 'img-src/sprite/**/*.png',
+    style: 'sass/_sprite.scss',
+    processor: 'sass'
+  }).pipe(gulpif('*.png', gulp.dest('img/'), gulp.dest('sass/')));
+});
+
+
+// Image min
 gulp.task('imagemin', function () {
   return gulp.src('img-src/*')
     .pipe(imagemin({
@@ -77,6 +90,23 @@ gulp.task('imagemin', function () {
 
 /**
  * *************************
+ * KSS tests
+ * *************************
+ */
+
+/*gulp.task('kss', function () {
+  return gulp.src(['sass/!**!/!*.scss'])
+    .pipe(globbing({
+      extensions: ['.scss']
+    }))
+    .pipe(kss({
+      overview: 'styleguide/styleguide.md'
+    }))
+    .pipe(gulp.dest('styleguide/'));
+});*/
+
+/**
+ * *************************
  * Primary Tasks
  * *************************
  */
@@ -85,6 +115,7 @@ gulp.task('watch', function () {
   gulp.watch('js-src/*.js', ['lint', 'scripts']);
   gulp.watch('js-src/plugins/*.js', ['js-plugins']);
   gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('img-src/sprite/*.png', ['sprites']);
   gulp.watch('img-src/*', ['imagemin']);
 });
 
@@ -93,6 +124,7 @@ gulp.task('default', [
   'sass',
   'scripts',
   'js-plugins',
+  'sprites',
   'imagemin',
   'watch'
 ]);

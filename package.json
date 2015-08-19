@@ -1,25 +1,35 @@
 {
   "name": "targaryen",
   "version": "0.1.0",
-  "description": "sample runner",
+  "description": "testing options for task running",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^5.1.1",
+    "debug": "^2.2.0",
     "gulp": "^3.8.11",
     "gulp-bower": "0.0.10",
     "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-debug": "^2.1.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
+    "gulp-kss": "0.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
-    "gulp-css-globbing": "^0.1.8",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
-    "gulp-imagemin": "^2.3.0",
-    "imagemin-pngquant": "^4.1.2"
+    "imagemin-pngquant": "^4.1.2",
+    "sprity": "^1.0.7",
+    "sprity-sass": "^1.0.4",
+    "kss": "^2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Enter",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "kss": "^2.1.0"
+  }
 }
