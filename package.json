@@ -30,6 +30,9 @@
   "author": "Jason Enter",
   "license": "MIT",
   "devDependencies": {
-    "kss": "^2.1.0"
+    "kss": "^2.1.0",
+    "backstopjs": "^0.5.1",
+    "casperjs": "^1.1.0-beta3",
+    "phantomjs": "^1.9.18"
   }
 }
