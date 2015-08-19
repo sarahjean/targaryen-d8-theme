@@ -16,4 +16,4 @@ echo " done."
 
 # Build the styleguide using kss-node.
 # kss-node [source files to parse] [destination folder] --template [location of template files]
-./node_modules/.bin/kss-node --config kss-project.json;
+./node_modules/.bin/kss-node --config kss-project.json --template kss_template/ ;

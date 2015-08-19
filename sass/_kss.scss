@@ -12,7 +12,7 @@
 // Markup:
 // <div class="test-block">
 //   <div class="inside">
-//      TEst Sugar plum cookie ice cream chocolate cake. Chupa chups jujubes tart candy
+//      Sugar plum cookie ice cream chocolate cake. Chupa chups jujubes tart candy
 //      cheesecake gummi bears cheesecake tiramisu. Oat cake sugar plum macaroon lemon
 //      drops bonbon sweet roll wafer tiramisu chocolate. Caramels pie oat cake sweet
 //      marshmallow. Chocolate cake chocolate toffee. Macaroon powder wafer bear claw
@@ -30,15 +30,3 @@
   padding: 20px;
   border: 1px dashed lightgrey;
 }
-
-// testing...
-body#kss-node {
-  background: white !important;
-  position: relative;
-  text-align: left !important;
-  .kss-main,
-  .kss-sidebar {
-    background: white !important;
-  }
-}
-

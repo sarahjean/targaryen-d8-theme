@@ -158,11 +158,3 @@ body.body-sidebar-none section#content {
   display: block;
   padding: 20px;
   border: 1px dashed lightgrey; }
-
-body#kss-node {
-  background: white !important;
-  position: relative;
-  text-align: left !important; }
-  body#kss-node .kss-main,
-  body#kss-node .kss-sidebar {
-    background: white !important; }
