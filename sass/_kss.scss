@@ -5,14 +5,15 @@
 //
 // Style guide: Blocks
 
-// core style for .block
-.block {
+// core style for .blockcustom
+.blockcustom {
   width: 90%;
   display: block;
   padding: 20px;
   border: 1px dashed lightgrey;
   margin: 0 0 20px 0;
-  background: gainsboro;
+  background: lightgrey;
+  border-radius: 5px;
 }
 
 // core style for .test-block
