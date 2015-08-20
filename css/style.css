@@ -152,7 +152,7 @@ body.body-sidebar-none section#content {
 /**
   Testable KSS file
 */
-.block {
+.blockcustom {
   width: 90%;
   display: block;
   padding: 20px;
