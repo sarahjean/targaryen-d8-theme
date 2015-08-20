@@ -1,32 +1,49 @@
-// Project
-//
-// Project description examples
-//
-//
-// Style guide: project styles
 //
 // Test Block
 //
-// Initial testing block styles in KSS node. 
+// Markup: ../kss_html/block.html
 //
-// Markup:
-// <div class="test-block">
-//   <div class="inside">
-//      Sugar plum cookie ice cream chocolate cake. Chupa chups jujubes tart candy
-//      cheesecake gummi bears cheesecake tiramisu. Oat cake sugar plum macaroon lemon
-//      drops bonbon sweet roll wafer tiramisu chocolate. Caramels pie oat cake sweet
-//      marshmallow. Chocolate cake chocolate toffee. Macaroon powder wafer bear claw
-//      oat cake jelly.
-//   </div>
-// </div>
-//
-// Style guide: test-block
+// Style guide: Blocks
 
-// core style for .test-block
-.test-block {
-  width: 95%;
-  background: yellowgreen;
+// core style for .block
+.block {
+  width: 90%;
   display: block;
   padding: 20px;
   border: 1px dashed lightgrey;
+  margin: 0 0 20px 0;
+  background: gainsboro;
+}
+
+// core style for .test-block
+.test-block {
+  background: yellowgreen;
+}
+
+// core style for .cheese
+.cheese {
+  background: yellow;
+  border: 1px dotted black;
+  color: green;
+}
+
+// Headers
+//
+// Markup: ../kss_html/headers.html
+//
+// Style guide: Headlines
+
+// core style for headlines
+
+h1, h2, h3 {
+  color: #336666;
+  font-family: cursive;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
 }
