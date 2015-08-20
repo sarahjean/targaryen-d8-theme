@@ -152,9 +152,28 @@ body.body-sidebar-none section#content {
 /**
   Testable KSS file
 */
-.test-block {
-  width: 95%;
-  background: yellowgreen;
+.block {
+  width: 90%;
   display: block;
   padding: 20px;
-  border: 1px dashed lightgrey; }
+  border: 1px dashed lightgrey;
+  margin: 0 0 20px 0;
+  background: gainsboro; }
+
+.test-block {
+  background: yellowgreen; }
+
+.cheese {
+  background: yellow;
+  border: 1px dotted black;
+  color: green; }
+
+h1, h2, h3 {
+  color: #336666;
+  font-family: cursive; }
+
+h1 {
+  font-size: 50px; }
+
+h2 {
+  font-size: 40px; }

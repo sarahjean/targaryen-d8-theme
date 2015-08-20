@@ -21,9 +21,10 @@
             <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
           </header>
           <nav class="kss-nav">
-            <ul class="kss-menu" data-kss-ref="test-block">
+            <ul class="kss-menu" data-kss-ref="Headlines">
               <li class="kss-menu-item"><a href="./index.html"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
-              <li class="kss-menu-item"><a href="section-test-block.html"><span class="kss-ref">test-block</span><span class="kss-name">Project</span></a></li>
+              <li class="kss-menu-item"><a href="section-Blocks.html"><span class="kss-ref">Blocks</span><span class="kss-name">Test Block</span></a></li>
+              <li class="kss-menu-item"><a href="section-Headlines.html"><span class="kss-ref">Headlines</span><span class="kss-name">Headers</span></a></li>
             </ul>
             <ul class="kss-menu-child">
             </ul>
@@ -32,39 +33,30 @@
       </div>
       <div class="kss-content">
         <article class="kss-article">
-          <section id="section-test-block" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">test-block</span> Project</h1>
-            <div class="kss-description">
-              <p>Project description examples</p>
-<p>Style guide: project styles</p>
-<p>Test Block</p>
-<p>Initial testing block styles in KSS node.</p>
-
-            </div>
+          <section id="section-Headlines" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">Headlines</span> Headers</h1>
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <div class="test-block">
-  <div class="inside">
-     Sugar plum cookie ice cream chocolate cake. Chupa chups jujubes tart candy
-     cheesecake gummi bears cheesecake tiramisu. Oat cake sugar plum macaroon lemon
-     drops bonbon sweet roll wafer tiramisu chocolate. Caramels pie oat cake sweet
-     marshmallow. Chocolate cake chocolate toffee. Macaroon powder wafer bear claw
-     oat cake jelly.
-  </div>
-</div>
+                  <h1>
+  I am a H1
+</h1>
+
+
+<h2>
+  I am a H2
+</h2>
                 </div>
               </div>
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;div class=&quot;test-block&quot;&gt;
-  &lt;div class=&quot;inside&quot;&gt;
-     Sugar plum cookie ice cream chocolate cake. Chupa chups jujubes tart candy
-     cheesecake gummi bears cheesecake tiramisu. Oat cake sugar plum macaroon lemon
-     drops bonbon sweet roll wafer tiramisu chocolate. Caramels pie oat cake sweet
-     marshmallow. Chocolate cake chocolate toffee. Macaroon powder wafer bear claw
-     oat cake jelly.
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                <pre><code data-language="html">&lt;h1&gt;
+  I am a H1
+&lt;/h1&gt;
+
+
+&lt;h2&gt;
+  I am a H2
+&lt;/h2&gt;</code></pre>
               </div>
             </div>
           </section>
@@ -76,6 +68,8 @@
     </div>
     <script src="public/kss.js"></script>
     <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
     <!--<![endif]-->
     <script src="public/main.js"></script>
   </body>
