@@ -24,8 +24,12 @@ screen_widths:
 
 #Type page URL paths below, here are a couple of examples
 paths:
-  bigfont: /bigfont
-  bigfont: /bigfont
+  bigfont:
+    path: /bigfont
+  homepage:
+    path: /
+    selector: "#content"
+
 
 #Amount of fuzz ImageMagick will use
 fuzz: '20%'
