@@ -13,22 +13,26 @@ directory: 'shots'
 
 # Add only 2 domains, key will act as a label
 domains:
-  first: "http://eejstanberydev.prod.acquia-sites.com/"
-  second: "http://eejstanberystg.prod.acquia-sites.com/"
+  demo_stage: "http://jasonenterfkjmpeoszq.devcloud.acquia-sites.com/"
+  demo_dev: "http://jasonentermtzn3xalbe.devcloud.acquia-sites.com/"
 
 #Type screen widths below, here are a couple of examples
 screen_widths:
   - 320
+  - 580
   - 768
   - 1024
 
 #Type page URL paths below, here are a couple of examples
 paths:
-  bigfont:
-    path: /bigfont
+  backpage:
+    path: node/126
   homepage:
     path: /
     selector: "#content"
+  homepage_sidebars:
+    path: /
+    selector: "#sidebar-first"
 
 
 #Amount of fuzz ImageMagick will use
@@ -36,7 +40,7 @@ fuzz: '20%'
 
 #Set the number of days to keep the site spider file
 spider_days:
-  - 10
+  - 20
 
 #Choose how results are displayed, by default alphanumeric. Different screen widths are always grouped.
 #alphanumeric - all paths (with, and without, a difference) are shown, sorted by path
