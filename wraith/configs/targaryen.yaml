@@ -33,6 +33,9 @@ paths:
   homepage_sidebars:
     path: /
     selector: "#sidebar-first"
+  nav_hovers:
+    path: /
+    selector: "#block-bartik-main-menu ul.menu > li > a:hover"
 
 
 #Amount of fuzz ImageMagick will use
